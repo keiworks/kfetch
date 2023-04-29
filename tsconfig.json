@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "moduleResolution": "nodenext",
+    "module": "NodeNext",
+    "noEmitOnError": true,
+    "outDir": "./dist",
+    "strict": true,
+    "target": "ESNext",
+    "verbatimModuleSyntax": true
+  },
+  "include": ["./src", "./tests"]
+}

@@ -1,0 +1,6 @@
+.husky/
+.vscode/
+src/
+
+.eslintrc.json
+tsconfig.json

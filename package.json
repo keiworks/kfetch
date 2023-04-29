@@ -1,0 +1,51 @@
+{
+  "name": "@keiworks/kfetch",
+  "type": "module",
+  "version": "0.1.0",
+  "author": "keiworks",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.16.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/keiworks/kfetch.git"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "publishConfig": {
+    "@keiworks:registry": "https://npm.pkg.github.com"
+  },
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "files": [
+    "./dist"
+  ],
+  "scripts": {
+    "format": "prettier --loglevel error --write ./src ./tests",
+    "lint": "eslint --fix ./src ./tests",
+    "test": "vitest",
+    "build": "pnpm run format && pnpm run lint && tsc -p ./tsconfig.build.json",
+    "prepare": "husky install",
+    "prepublishOnly": "pnpm run build"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "17.6.1",
+    "@commitlint/config-conventional": "17.6.1",
+    "@typescript-eslint/eslint-plugin": "5.59.1",
+    "@typescript-eslint/parser": "5.59.1",
+    "eslint": "8.39.0",
+    "eslint-config-prettier": "8.8.0",
+    "eslint-plugin-prettier": "4.2.1",
+    "eslint-plugin-simple-import-sort": "10.0.0",
+    "fastify": "4.17.0",
+    "husky": "8.0.3",
+    "prettier": "2.8.8",
+    "typescript": "5.0.4",
+    "vitest": "0.30.1"
+  }
+}
